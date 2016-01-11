@@ -1,4 +1,4 @@
-var app = angular.module('sengineSite', ['ui.ace', 'ngMaterial', 'ngMessages', 'ngRoute' ]);
+var app = angular.module('sengineSite', ['ui.ace', 'ngMaterial', 'ngMessages', 'ngRoute', 'ngFileUpload']);
 
 app.constant('API_URL', 'http://104.236.15.225:8080');
 
@@ -70,7 +70,7 @@ app.controller('EditorController', function($scope, httpFactory, reverseFilter) 
 
 })
 
-app.controller('HostingController', function($scope, httpFactory) {
+app.controller('HostingController', function($scope, httpFactory, Upload) {
 
 })
 
