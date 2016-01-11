@@ -43,20 +43,27 @@ app.controller('EditorController', function($scope, httpFactory, reverseFilter) 
 
   $scope.results = [];
 
+  $scope.clearTerminal = function() {
+    $scope.results = [];
+  }
+
   $scope.execute = function() {
     httpFactory.execute($scope.currentEditorValue)
     .then(function success(response) {
-      console.log(response.data);
-      console.log('working')
+      console.log("RESPONSE: ", response);
       var result = {};
-      if (response.data.stderr == "") {
-        result.output = response.data.response.stdout;
+      if (response.data == "language not detected") {
+        result.output = "Error: Language not detected",
+        result.language = "N/A"
       } else {
-        result.output = response.data.response.stdout + "\n" + response.data.response.stderr;
+        if (response.data.stdout != "") {
+          result.output = response.data.stdout.trim();
+        } 
+        if (response.data.stderr != "") {
+          result.output = response.data.stderr.trim();
+        }
+        result.language = response.data.language.trim();
       }
-      result.language = response.data.language;
-      // result.lang = response.data.
-      // result.time = response.data.
       $scope.results.push(result)
     })
   }
