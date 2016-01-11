@@ -1,4 +1,14 @@
 <div ng-cloak class="hosting container">
   <h1>Instant Static Web Hosting</h1>
-  <p class="subhead">Upload your static website files for instant hosting using our powerful API.</p>
+  <p class="subhead">Upload your static web files for instant temporary hosting powered by our API.</p>
+  <form name="form">
+  Single Image with validations
+  <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+    ngf-accept="'image/*'" ngf-max-size="20MB" ngf-min-height="100" 
+    ngf-resize="{width: 100, height: 100}">Select</div>
+  Multiple files
+  <div class="button" ngf-select ng-model="files" ngf-multiple="true">Select</div>
+  Drop files: <div ngf-drop ng-model="files" class="drop-box">Drop</div>
+  <button type="submit" ng-click="submit()">submit</button>
+</form>
 </div>
