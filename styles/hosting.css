@@ -1,0 +1,13 @@
+.hosting h1 {
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  font-weight: bolder;
+}
+
+.hosting .subhead {
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  font-size: 1.25em;
+  font-style: italic;
+  margin-bottom: 20px;
+}

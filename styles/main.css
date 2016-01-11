@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  height: 100%;
+  padding-bottom: 200px;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+.navbar {
+  border-bottom-color: orange;
+}
+
+.navbar-brand {
+  margin-top: 15px;
+  font-family: 'Ramaraja', serif;
+  font-size: 3em;
+}
+
+.nav {
+  margin-top: 10px;
+  font-size: 1.25em;
+  font-family: 'Muli', sans-serif;
+}
+
+.nav a {
+  color: black !important;
+}
+
+.nav a:hover {
+  color: orange !important;
+}
+
+.footer {
+  font-family: 'Muli', sans-serif;
+  padding-top: 15px;
+  text-align: center;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
